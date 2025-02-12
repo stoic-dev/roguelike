@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TileAtlasCoordinates" load_steps=2 format=3 uid="uid://bi154w0osa1sm"]
+
+[ext_resource type="Script" path="res://resources/tile-atlas-coordinates/tile-atlas-coordinates.gd" id="1_k1hua"]
+
+[resource]
+script = ExtResource("1_k1hua")
+dungeon_top_left_corner_wall = Vector2i(18, 0)
+dungeon_top_right_corner_wall = Vector2i(20, 0)
+dungeon_bottom_left_corner_wall = Vector2i(18, 2)
+dungeon_bottom_right_corner_wall = Vector2i(20, 2)
+dungeon_top_wall = Vector2i(19, 0)
+dungeon_bottom_wall = Vector2i(19, 2)
+dungeon_left_wall = Vector2i(18, 1)
+dungeon_right_wall = Vector2i(20, 1)
+dungeon_floor = Vector2i(19, 1)

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="BSPNodeChildren" load_steps=2 format=3 uid="uid://cfs3enbo0i2sj"]
+
+[ext_resource type="Script" path="res://resources/bsp-node-children/bsp-node-children.gd" id="1_ouujj"]
+
+[resource]
+script = ExtResource("1_ouujj")
