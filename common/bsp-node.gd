@@ -18,10 +18,12 @@ func partition(depth: int) -> void:
 	
 	if split_horizontal:
 		var top_height = int(size.y * split_percent)
+		top_height = top_height - (top_height % 48)
 		left = BSPNode.new(self, position, Vector2i(size.x, top_height))
 		right = BSPNode.new(self, Vector2i(position.x, position.y + top_height), Vector2i(size.x, size.y - top_height))
 	else:
 		var left_width = int(size.x * split_percent)
+		left_width = left_width - (left_width % 48)
 		left = BSPNode.new(self, position, Vector2i(left_width, size.y))
 		right = BSPNode.new(self, Vector2i(position.x + left_width, position.y), Vector2i(size.x - left_width, size.y))
 	
