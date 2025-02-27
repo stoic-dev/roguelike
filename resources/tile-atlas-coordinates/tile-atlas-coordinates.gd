@@ -9,4 +9,4 @@ extends Resource
 @export var dungeon_bottom_wall: Vector2i = Vector2i(19, 2)
 @export var dungeon_left_wall: Vector2i = Vector2i(18, 1)
 @export var dungeon_right_wall: Vector2i = Vector2i(20, 1)
-@export var dungeon_floor: Vector2i = Vector2i(19, 1)
+@export var dungeon_floor: Vector2i = Vector2i(10, 17)

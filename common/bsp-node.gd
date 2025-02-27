@@ -38,4 +38,4 @@ func get_leaves() -> Array[BSPNode]:
 		return left.get_leaves() + right.get_leaves()
 	
 func get_center() -> Vector2i:
-	return Vector2i(position.x + floor(float(size.x / 2)) / 2, position.y + floor(float(size.y / 2)))
+	return Vector2i(position.x + floor(floor(float(size.x / 2)) / 2), position.y + floor(float(size.y / 2)))

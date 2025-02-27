@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi2pxoh4dxa7t"]
+
+[ext_resource type="Texture2D" uid="uid://b5nthex2u6i8k" path="res://assets/spritesheet.png" id="1_ovns0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n7de"]
+size = Vector2(14, 16)
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2n7de")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+modulate = Color(0.832024, 0.229343, 0.259206, 1)
+texture = ExtResource("1_ovns0")
+region_enabled = true
+region_rect = Rect2(427, 35, 12, 14)

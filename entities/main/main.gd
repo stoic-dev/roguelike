@@ -8,8 +8,8 @@ var tile_atlas_coordinates: TileAtlasCoordinates = TileAtlasCoordinates.new()
 @export var tile_size: int = 48
 @export var max_room_count: int = 6
 @export var min_room_count: int = 3
-@export var max_dungeon_size: int = 3200
-@export var min_dungeon_size: int = 2400
+@export var max_dungeon_size: int = 2880
+@export var min_dungeon_size: int = 2280
 @export var min_room_size: int = 5
 
 var random_dungeon_size = randi_range(min_dungeon_size, max_dungeon_size)
@@ -24,7 +24,7 @@ func _ready() -> void:
 	root_room.should_draw_floor = true
 	root_room.should_have_doors = false
 	add_child(root_room)
-	root_node.partition(2)
+	root_node.partition(3)
 	for node in root_node.get_leaves():
 		rooms.append(spawn_room_in_region(node.position, node.size))
 	

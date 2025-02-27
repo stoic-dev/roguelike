@@ -70,13 +70,17 @@ func draw_doors() -> void:
 		var wall = walls[wall_id]
 		match wall:
 			1:
-				wall_layer.set_cell(top_wall_coordinates[randi_range(0, top_wall_coordinates.size() - 1)])
+				if top_wall_coordinates.size() != 0:
+					wall_layer.set_cell(top_wall_coordinates[randi_range(0, top_wall_coordinates.size() - 1)])
 			2:
-				wall_layer.set_cell(bottom_wall_coordinates[randi_range(0, bottom_wall_coordinates.size() - 1)])
+				if bottom_wall_coordinates.size() != 0:
+					wall_layer.set_cell(bottom_wall_coordinates[randi_range(0, bottom_wall_coordinates.size() - 1)])
 			3:
-				wall_layer.set_cell(left_wall_coordinates[randi_range(0, left_wall_coordinates.size() - 1)])
+				if left_wall_coordinates.size() != 0:
+					wall_layer.set_cell(left_wall_coordinates[randi_range(0, left_wall_coordinates.size() - 1)])
 			4:
-				wall_layer.set_cell(right_wall_coordinates[randi_range(0, right_wall_coordinates.size() - 1)])
+				if right_wall_coordinates.size() != 0:
+					wall_layer.set_cell(right_wall_coordinates[randi_range(0, right_wall_coordinates.size() - 1)])
 		walls.remove_at(wall_id)
 		door_count += 1
 		

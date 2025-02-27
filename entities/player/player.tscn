@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn4elf1vc2l1r"]
+[gd_scene load_steps=6 format=3 uid="uid://dn4elf1vc2l1r"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_jelku"]
 [ext_resource type="Texture2D" uid="uid://b5nthex2u6i8k" path="res://assets/spritesheet.png" id="1_nlhv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kei7i"]
 size = Vector2(14, 14)
+
+[sub_resource type="Gradient" id="Gradient_x53cy"]
+offsets = PackedFloat32Array(0, 0.733766)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tq8tk"]
+gradient = SubResource("Gradient_x53cy")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.490826, 0.481651)
+fill_to = Vector2(0, 1)
 
 [node name="Player" type="CharacterBody2D"]
 modulate = Color(0.348378, 0.666328, 0.268773, 1)
@@ -20,3 +32,10 @@ region_enabled = true
 region_rect = Rect2(477, 1, 14, 14)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 1, 1, 0.403922)
+energy = 3.0
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.313726)
+texture = SubResource("GradientTexture2D_tq8tk")
